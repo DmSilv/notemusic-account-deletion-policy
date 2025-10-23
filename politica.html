@@ -138,9 +138,23 @@
             margin-bottom: var(--spacing-sm);
         }
 
-        .logo svg {
+        .logo-circle {
             width: 50px;
             height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo-letters {
+            color: var(--text-white);
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--font-family-bold);
+            letter-spacing: -1px;
         }
 
         .app-name {
@@ -523,15 +537,9 @@
         <header class="header">
             <div class="logo-container">
                 <div class="logo">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100" height="100" rx="20" fill="#007AFF"/>
-                        <path d="M30 30h40v10H30V30z" fill="white"/>
-                        <path d="M30 50h40v10H30V50z" fill="white"/>
-                        <path d="M30 70h40v10H30V70z" fill="white"/>
-                        <circle cx="75" cy="35" r="8" fill="#0A8CD6"/>
-                        <circle cx="75" cy="55" r="8" fill="#0A8CD6"/>
-                        <circle cx="75" cy="75" r="8" fill="#0A8CD6"/>
-                    </svg>
+                    <div class="logo-circle">
+                        <span class="logo-letters">NM</span>
+                    </div>
                 </div>
                 <h1 class="app-name">NoteMusic</h1>
                 <p class="subtitle">Política de Privacidade</p>
