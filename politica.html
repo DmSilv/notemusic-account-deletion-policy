@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoteMusic - Política de Exclusão de Conta</title>
-    <meta name="description" content="Política de exclusão de conta e dados do aplicativo NoteMusic - Desenvolvedor Daniel Silva">
+    <title>NoteMusic - Política de Privacidade</title>
+    <meta name="description" content="Política de privacidade do aplicativo NoteMusic - Desenvolvedor Daniel Silva">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -212,15 +212,15 @@
             color: var(--text-white);
         }
 
-        /* Lista de passos */
-        .steps-list {
+        /* Lista numerada */
+        .policy-list {
             list-style: none;
-            counter-reset: step-counter;
+            counter-reset: policy-counter;
         }
 
-        .steps-list li {
-            counter-increment: step-counter;
-            margin-bottom: var(--spacing-lg);
+        .policy-list li {
+            counter-increment: policy-counter;
+            margin-bottom: var(--spacing-xl);
             padding: var(--spacing-lg);
             background: var(--light);
             border-radius: var(--border-radius-md);
@@ -228,8 +228,8 @@
             position: relative;
         }
 
-        .steps-list li::before {
-            content: counter(step-counter);
+        .policy-list li::before {
+            content: counter(policy-counter);
             position: absolute;
             left: -12px;
             top: var(--spacing-lg);
@@ -245,31 +245,41 @@
             font-weight: 700;
         }
 
-        /* Grid de dados */
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .data-item {
-            background: var(--light);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            border-left: 4px solid var(--secondary);
-        }
-
-        .data-item h4 {
+        .policy-list h3 {
             color: var(--primary);
-            font-size: var(--font-size-md);
+            font-size: var(--font-size-lg);
             font-weight: 700;
             margin-bottom: var(--spacing-sm);
         }
 
-        .data-item p {
+        .policy-list p {
             color: var(--text-secondary);
-            font-size: var(--font-size-sm);
+            font-size: var(--font-size-md);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .policy-list ul {
+            margin-left: var(--spacing-lg);
+            margin-top: var(--spacing-sm);
+        }
+
+        .policy-list ul li {
+            counter-increment: none;
+            background: none;
+            border-left: none;
+            padding: var(--spacing-xs) 0;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .policy-list ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            width: auto;
+            height: auto;
+            background: none;
+            position: static;
+            margin-right: var(--spacing-sm);
         }
 
         /* Alertas */
@@ -343,10 +353,6 @@
             .card {
                 padding: var(--spacing-lg);
             }
-            
-            .data-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* Animações */
@@ -369,6 +375,8 @@
         .card:nth-child(3) { animation-delay: 0.2s; }
         .card:nth-child(4) { animation-delay: 0.3s; }
         .card:nth-child(5) { animation-delay: 0.4s; }
+        .card:nth-child(6) { animation-delay: 0.5s; }
+        .card:nth-child(7) { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
@@ -376,122 +384,21 @@
         <!-- Header -->
         <header class="header">
             <h1 class="logo">🎵 NoteMusic</h1>
-            <p class="subtitle">Política de Exclusão de Conta e Dados</p>
+            <p class="subtitle">Política de Privacidade</p>
         </header>
 
         <!-- Introdução -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">📋</div>
-                <h2 class="card-title">Informações Importantes</h2>
+                <h2 class="card-title">Sobre o NoteMusic</h2>
             </div>
             <div class="alert alert-info">
                 <strong>Desenvolvedor:</strong> Daniel Silva<br>
                 <strong>Aplicativo:</strong> NoteMusic<br>
-                <strong>Última atualização:</strong> 23 de outubro de 2025
+                <strong>Última atualização:</strong> Outubro de 2025
             </div>
-            <p>Esta página descreve como você pode solicitar a exclusão da sua conta e dados pessoais do aplicativo NoteMusic, conforme exigido pelas políticas do Google Play Store e regulamentações de proteção de dados.</p>
-        </div>
-
-        <!-- Como Solicitar Exclusão -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon">📱</div>
-                <h2 class="card-title">Como Solicitar a Exclusão da Sua Conta</h2>
-            </div>
-            <ol class="steps-list">
-                <li>
-                    <strong>Abra o aplicativo NoteMusic</strong><br>
-                    Faça login na sua conta usando suas credenciais.
-                </li>
-                <li>
-                    <strong>Acesse o Perfil</strong><br>
-                    Toque no ícone de perfil no canto inferior direito da tela.
-                </li>
-                <li>
-                    <strong>Selecione "Excluir Conta"</strong><br>
-                    Role para baixo e encontre a opção "Excluir Conta" nas configurações.
-                </li>
-                <li>
-                    <strong>Confirme sua identidade</strong><br>
-                    Digite sua senha atual para confirmar que você é o proprietário da conta.
-                </li>
-                <li>
-                    <strong>Digite a confirmação</strong><br>
-                    Digite exatamente "EXCLUIR CONTA" para confirmar sua decisão.
-                </li>
-            </ol>
-            <div class="alert alert-warning">
-                <strong>⚠️ Importante:</strong> Após solicitar a exclusão, você terá 7 dias para cancelar. Após esse período, sua conta será permanentemente removida e não poderá ser recuperada.
-            </div>
-        </div>
-
-        <!-- Tipos de Dados -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon">🗂️</div>
-                <h2 class="card-title">Dados que Serão Excluídos</h2>
-            </div>
-            <div class="data-grid">
-                <div class="data-item">
-                    <h4>👤 Dados Pessoais</h4>
-                    <p>Nome completo, email, data de nascimento e informações de perfil</p>
-                </div>
-                <div class="data-item">
-                    <h4>🎵 Dados Musicais</h4>
-                    <p>Progresso nos módulos, pontuações, conquistas e histórico de aprendizado</p>
-                </div>
-                <div class="data-item">
-                    <h4>📊 Estatísticas</h4>
-                    <p>Nível atual, pontos acumulados, sequência de dias e métricas de uso</p>
-                </div>
-                <div class="data-item">
-                    <h4>🏆 Conquistas</h4>
-                    <p>Todas as medalhas, badges e reconhecimentos obtidos</p>
-                </div>
-                <div class="data-item">
-                    <h4>📝 Conteúdo Gerado</h4>
-                    <p>Notas pessoais, comentários e qualquer conteúdo criado pelo usuário</p>
-                </div>
-                <div class="data-item">
-                    <h4>⚙️ Configurações</h4>
-                    <p>Preferências do aplicativo, configurações de notificação e personalizações</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Período de Retenção -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon">⏰</div>
-                <h2 class="card-title">Período de Retenção</h2>
-            </div>
-            <div class="alert alert-success">
-                <strong>✅ Período de Graça:</strong> 7 dias após a solicitação de exclusão<br>
-                <strong>🔄 Cancelamento:</strong> Você pode cancelar a exclusão durante este período<br>
-                <strong>🗑️ Exclusão Final:</strong> Após 7 dias, todos os dados são permanentemente removidos
-            </div>
-            <p>Durante o período de graça de 7 dias, seus dados permanecem no sistema mas sua conta fica inativa. Você pode cancelar a exclusão a qualquer momento durante este período através do aplicativo.</p>
-        </div>
-
-        <!-- Contato -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon">📞</div>
-                <h2 class="card-title">Precisa de Ajuda?</h2>
-            </div>
-            <p>Se você tiver dúvidas sobre o processo de exclusão ou precisar de assistência, nossa equipe de suporte está disponível para ajudar.</p>
-            <div class="contact-info">
-                <h4>📧 Suporte Técnico</h4>
-                <p><strong>Email:</strong> suporte.notemusic@gmail.com</p>
-                <p><strong>Resposta:</strong> Até 48 horas úteis</p>
-                <p><strong>Idiomas:</strong> Português (Brasil)</p>
-            </div>
-            <div style="margin-top: var(--spacing-lg);">
-                <a href="mailto:suporte.notemusic@gmail.com?subject=Solicitação de Exclusão de Conta - NoteMusic" class="btn btn-primary">
-                    📧 Enviar Email de Suporte
-                </a>
-            </div>
+            <p>O aplicativo <strong>NoteMusic</strong> foi desenvolvido com o objetivo de oferecer uma experiência educativa através de quizzes musicais, proporcionando aprendizado interativo e divertido sobre música.</p>
         </div>
 
         <!-- Política de Privacidade -->
@@ -500,18 +407,90 @@
                 <div class="card-icon">🔒</div>
                 <h2 class="card-title">Política de Privacidade</h2>
             </div>
-            <p>Esta política de exclusão está em conformidade com:</p>
-            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
-                <li><strong>LGPD</strong> - Lei Geral de Proteção de Dados (Brasil)</li>
-                <li><strong>GDPR</strong> - Regulamento Geral sobre a Proteção de Dados (Europa)</li>
-                <li><strong>Google Play Store</strong> - Políticas de Desenvolvedor</li>
-            </ul>
-            <div class="alert alert-info">
-                <strong>ℹ️ Transparência:</strong> Comprometemo-nos a ser transparentes sobre como coletamos, usamos e excluímos seus dados pessoais.
+            <ol class="policy-list">
+                <li>
+                    <h3>Coleta e uso de informações</h3>
+                    <p>O NoteMusic coleta apenas as informações necessárias para o funcionamento do aplicativo, como <strong>e-mail e senha</strong> durante o cadastro do usuário.</p>
+                    <p>Esses dados são armregados de forma segura em nosso banco de dados e utilizados exclusivamente para:</p>
+                    <ul>
+                        <li>Autenticação e identificação dentro do app</li>
+                        <li>Personalização da experiência do usuário</li>
+                        <li>Salvamento do progresso nos quizzes</li>
+                        <li>Comunicação sobre atualizações importantes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Compartilhamento de dados</h3>
+                    <p>O NoteMusic <strong>não compartilha, vende ou divulga informações pessoais</strong> a terceiros.</p>
+                    <p>Seus dados permanecem confidenciais e são utilizados exclusivamente para melhorar sua experiência no aplicativo.</p>
+                </li>
+
+                <li>
+                    <h3>Segurança</h3>
+                    <p>As informações dos usuários são protegidas com medidas de segurança adequadas:</p>
+                    <ul>
+                        <li>Senhas são armazenadas de forma criptografada</li>
+                        <li>Conexões seguras (HTTPS) para todas as comunicações</li>
+                        <li>Acesso restrito aos dados pessoais</li>
+                        <li>Monitoramento contínuo de segurança</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Acesso e exclusão de conta</h3>
+                    <p>Você tem total controle sobre seus dados pessoais:</p>
+                    <ul>
+                        <li><strong>Acesso:</strong> Você pode visualizar seus dados através do aplicativo</li>
+                        <li><strong>Modificação:</strong> Pode atualizar suas informações a qualquer momento</li>
+                        <li><strong>Exclusão:</strong> Pode solicitar a exclusão da conta e dos dados associados</li>
+                    </ul>
+                    <p>Para solicitar a exclusão, envie um e-mail para <strong>suporte.notemusic@gmail.com</strong> ou use a funcionalidade de exclusão diretamente no aplicativo.</p>
+                </li>
+
+                <li>
+                    <h3>Alterações nesta política</h3>
+                    <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por outros motivos operacionais, legais ou regulamentares.</p>
+                    <p>As alterações serão publicadas nesta página e, quando significativas, notificaremos os usuários através do aplicativo.</p>
+                </li>
+
+                <li>
+                    <h3>Contato</h3>
+                    <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados pessoais, entre em contato com nossa equipe:</p>
+                    <ul>
+                        <li><strong>E-mail:</strong> suporte.notemusic@gmail.com</li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/DmSilv" target="_blank" style="color: var(--primary); text-decoration: none;">https://github.com/DmSilv</a></li>
+                        <li><strong>Resposta:</strong> Até 48 horas úteis</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Conformidade Legal -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">⚖️</div>
+                <h2 class="card-title">Conformidade Legal</h2>
             </div>
-            <div style="margin-top: var(--spacing-lg);">
-                <a href="politica.html" class="btn btn-outline">
-                    📄 Ver Política de Privacidade Completa
+            <div class="alert alert-success">
+                <strong>✅ Conformidade:</strong> Esta política está em conformidade com a LGPD (Lei Geral de Proteção de Dados) e outras regulamentações de privacidade aplicáveis.
+            </div>
+            <p>O NoteMusic está comprometido em proteger a privacidade e os dados pessoais de seus usuários, seguindo as melhores práticas de segurança e conformidade legal.</p>
+        </div>
+
+        <!-- Links Úteis -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🔗</div>
+                <h2 class="card-title">Links Úteis</h2>
+            </div>
+            <p>Para mais informações sobre privacidade e proteção de dados:</p>
+            <div style="margin-top: var(--spacing-lg); display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                <a href="mailto:suporte.notemusic@gmail.com?subject=Dúvida sobre Política de Privacidade - NoteMusic" class="btn btn-primary">
+                    📧 Enviar Email de Suporte
+                </a>
+                <a href="https://github.com/DmSilv" target="_blank" class="btn btn-outline">
+                    👨‍💻 GitHub do Desenvolvedor
                 </a>
             </div>
         </div>
@@ -526,6 +505,7 @@
             <div class="contact-info">
                 <p><strong>📧 Contato:</strong> suporte.notemusic@gmail.com</p>
                 <p><strong>🌐 Plataforma:</strong> Google Play Store</p>
+                <p><strong>📅 Última atualização:</strong> Outubro de 2025</p>
             </div>
         </div>
     </footer>
