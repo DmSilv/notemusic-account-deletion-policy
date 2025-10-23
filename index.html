@@ -3,24 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Exclusão de Contas - NoteMusic</title>
-    <meta name="description" content="Política de exclusão de contas e dados pessoais do aplicativo NoteMusic - Google Play Store compliant">
-    <meta name="keywords" content="NoteMusic, exclusão de conta, dados pessoais, privacidade, Google Play Store">
-    <meta name="author" content="Daniel Silva - NoteMusic Developer">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://DmSilv.github.io/notemusic-account-deletion-policy/">
-    <meta property="og:title" content="Política de Exclusão de Contas - NoteMusic">
-    <meta property="og:description" content="Política de exclusão de contas e dados pessoais do aplicativo NoteMusic">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://DmSilv.github.io/notemusic-account-deletion-policy/">
-    <meta property="twitter:title" content="Política de Exclusão de Contas - NoteMusic">
-    <meta property="twitter:description" content="Política de exclusão de contas e dados pessoais do aplicativo NoteMusic">
-    
+    <title>NoteMusic - Política de Exclusão de Conta</title>
+    <meta name="description" content="Política de exclusão de conta e dados do aplicativo NoteMusic - Desenvolvedor Daniel Silva">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            /* Cores do Design System NoteMusic */
+            --primary: #007AFF;
+            --primary-dark: #0056CC;
+            --primary-light: #B3D9FF;
+            --secondary: #0A8CD6;
+            --secondary-dark: #085A94;
+            --secondary-light: #7BBDE8;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --error: #F44336;
+            --info: #2196F3;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #131313;
+            --medium: #545454;
+            --light: #F8F9FA;
+            --border: #E9ECEF;
+            --divider: #F1F1F1;
+            --background: #FFFFFF;
+            --background-secondary: #F8F9FA;
+            --background-card: #FFFFFF;
+            --text-primary: #131313;
+            --text-secondary: #545454;
+            --text-light: #6C757D;
+            --text-white: #FFFFFF;
+            --accent: #E5944A;
+            
+            /* Espaçamentos */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 12px;
+            --spacing-lg: 16px;
+            --spacing-xl: 20px;
+            --spacing-xxl: 24px;
+            --spacing-xxxl: 32px;
+            
+            /* Tipografia */
+            --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-md: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-xxl: 24px;
+            --font-size-xxxl: 32px;
+            --font-size-title: 28px;
+            --font-size-display: 36px;
+            
+            /* Sombras */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            /* Bordas */
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 20px;
+            --border-radius-full: 26px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -28,344 +79,450 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: var(--font-family);
+            background: linear-gradient(135deg, var(--background-secondary) 0%, var(--white) 100%);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background: white;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: var(--spacing-lg);
         }
 
+        /* Header com gradiente NoteMusic */
         .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-white);
+            padding: var(--spacing-xxxl) var(--spacing-lg);
+            border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
+            margin-bottom: var(--spacing-xxxl);
+            box-shadow: var(--shadow-lg);
         }
 
         .logo {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
+            font-size: var(--font-size-display);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .subtitle {
-            font-size: 1.2em;
-            color: #666;
+            font-size: var(--font-size-lg);
             font-weight: 300;
+            opacity: 0.9;
         }
 
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
+        /* Cards com design do app */
+        .card {
+            background: var(--background-card);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xxl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
         }
 
-        .section h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.4em;
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .section h3 {
-            color: #555;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            font-size: 1.2em;
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--divider);
         }
 
-        .steps {
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--spacing-md);
+            color: var(--text-white);
+            font-size: var(--font-size-lg);
+        }
+
+        .card-title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* Botões com estilo do app */
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-md) var(--spacing-xxl);
+            border-radius: var(--border-radius-full);
+            font-size: var(--font-size-md);
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: var(--success);
+            color: var(--text-white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--text-white);
+        }
+
+        /* Lista de passos */
+        .steps-list {
+            list-style: none;
             counter-reset: step-counter;
         }
 
-        .step {
+        .steps-list li {
             counter-increment: step-counter;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--light);
+            border-radius: var(--border-radius-md);
+            border-left: 4px solid var(--primary);
             position: relative;
         }
 
-        .step::before {
+        .steps-list li::before {
             content: counter(step-counter);
             position: absolute;
-            left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #667eea;
-            color: white;
-            width: 25px;
-            height: 25px;
+            left: -12px;
+            top: var(--spacing-lg);
+            background: var(--primary);
+            color: var(--text-white);
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 0.9em;
+            font-size: var(--font-size-sm);
+            font-weight: 700;
+        }
+
+        /* Grid de dados */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .data-item {
+            background: var(--light);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .data-item h4 {
+            color: var(--primary);
+            font-size: var(--font-size-md);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .data-item p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Alertas */
+        .alert {
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background: #E3F2FD;
+            border-left-color: var(--info);
+            color: var(--secondary-dark);
+        }
+
+        .alert-warning {
+            background: #FFF3E0;
+            border-left-color: var(--warning);
+            color: #E65100;
+        }
+
+        .alert-success {
+            background: #E8F5E8;
+            border-left-color: var(--success);
+            color: #2E7D32;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--text-white);
+            padding: var(--spacing-xxxl) var(--spacing-lg);
+            text-align: center;
+            margin-top: var(--spacing-xxxl);
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-light);
         }
 
         .contact-info {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 5px solid #2196f3;
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            margin-top: var(--spacing-lg);
         }
 
-        .email-link {
-            color: #2196f3;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        .email-link:hover {
-            text-decoration: underline;
-        }
-
-        .data-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .data-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            text-align: center;
-        }
-
-        .data-card h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-        }
-
-        .back-button {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-
-        .back-button:hover {
-            background: #5a6fd8;
-        }
-
-        .compliance-badge {
-            background: #28a745;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 10px;
-        }
-
+        /* Responsividade */
         @media (max-width: 768px) {
             .container {
-                margin: 10px;
-                padding: 15px;
+                padding: var(--spacing-md);
+            }
+            
+            .header {
+                padding: var(--spacing-xl) var(--spacing-md);
             }
             
             .logo {
-                font-size: 2em;
+                font-size: var(--font-size-xxxl);
             }
             
-            .data-types {
+            .card {
+                padding: var(--spacing-lg);
+            }
+            
+            .data-grid {
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.2s; }
+        .card:nth-child(4) { animation-delay: 0.3s; }
+        .card:nth-child(5) { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">🎵 NoteMusic</div>
-            <div class="subtitle">Política de Exclusão de Contas e Dados Pessoais</div>
-            <span class="compliance-badge">✓ Google Play Store Compliant</span>
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">🎵 NoteMusic</h1>
+            <p class="subtitle">Política de Exclusão de Conta e Dados</p>
+        </header>
+
+        <!-- Introdução -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📋</div>
+                <h2 class="card-title">Informações Importantes</h2>
+            </div>
+            <div class="alert alert-info">
+                <strong>Desenvolvedor:</strong> Daniel Silva<br>
+                <strong>Aplicativo:</strong> NoteMusic<br>
+                <strong>Última atualização:</strong> 23 de outubro de 2025
+            </div>
+            <p>Esta página descreve como você pode solicitar a exclusão da sua conta e dados pessoais do aplicativo NoteMusic, conforme exigido pelas políticas do Google Play Store e regulamentações de proteção de dados.</p>
         </div>
 
-        <div class="section">
-            <h2>📋 Sobre o NoteMusic</h2>
-            <p>O <strong>NoteMusic</strong> é um aplicativo educacional desenvolvido por <strong>Daniel Silva</strong> para ensinar teoria musical de forma interativa e gamificada. Nosso compromisso é proteger sua privacidade e fornecer controle total sobre seus dados pessoais.</p>
-        </div>
-
-        <div class="section">
-            <h2>🗑️ Como Solicitar a Exclusão da Sua Conta</h2>
-            <p>Para solicitar a exclusão da sua conta e todos os dados associados, siga estas etapas:</p>
-            
-            <div class="steps">
-                <div class="step">
-                    <strong>Acesse o aplicativo NoteMusic</strong><br>
-                    Abra o aplicativo em seu dispositivo móvel e faça login com suas credenciais.
-                </div>
-                
-                <div class="step">
-                    <strong>Navegue até o Perfil</strong><br>
-                    Toque no ícone de perfil na parte inferior da tela principal.
-                </div>
-                
-                <div class="step">
-                    <strong>Acesse as Configurações da Conta</strong><br>
-                    Na tela de perfil, toque em "Configurações da Conta" ou "Gerenciar Conta".
-                </div>
-                
-                <div class="step">
-                    <strong>Solicite a Exclusão</strong><br>
-                    Toque em "Excluir Conta" e siga as instruções na tela. Você precisará confirmar sua senha e digitar "EXCLUIR CONTA" para confirmar.
-                </div>
-                
-                <div class="step">
-                    <strong>Confirmação por Email</strong><br>
-                    Você receberá um email de confirmação com os detalhes da exclusão e o prazo de 7 dias para cancelar.
-                </div>
+        <!-- Como Solicitar Exclusão -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📱</div>
+                <h2 class="card-title">Como Solicitar a Exclusão da Sua Conta</h2>
+            </div>
+            <ol class="steps-list">
+                <li>
+                    <strong>Abra o aplicativo NoteMusic</strong><br>
+                    Faça login na sua conta usando suas credenciais.
+                </li>
+                <li>
+                    <strong>Acesse o Perfil</strong><br>
+                    Toque no ícone de perfil no canto inferior direito da tela.
+                </li>
+                <li>
+                    <strong>Selecione "Excluir Conta"</strong><br>
+                    Role para baixo e encontre a opção "Excluir Conta" nas configurações.
+                </li>
+                <li>
+                    <strong>Confirme sua identidade</strong><br>
+                    Digite sua senha atual para confirmar que você é o proprietário da conta.
+                </li>
+                <li>
+                    <strong>Digite a confirmação</strong><br>
+                    Digite exatamente "EXCLUIR CONTA" para confirmar sua decisão.
+                </li>
+            </ol>
+            <div class="alert alert-warning">
+                <strong>⚠️ Importante:</strong> Após solicitar a exclusão, você terá 7 dias para cancelar. Após esse período, sua conta será permanentemente removida e não poderá ser recuperada.
             </div>
         </div>
 
-        <div class="contact-info">
-            <h3>📧 Contato Alternativo</h3>
-            <p>Se você não conseguir acessar o aplicativo ou precisar de assistência adicional, entre em contato conosco:</p>
-            <p><strong>Email:</strong> <a href="mailto:suporte.notemusic@gmail.com" class="email-link">suporte.notemusic@gmail.com</a></p>
-            <p><strong>Assunto:</strong> Solicitação de Exclusão de Conta</p>
-            <p><strong>Tempo de Resposta:</strong> Até 48 horas úteis</p>
-        </div>
-
-        <div class="section">
-            <h2>📊 Dados que Serão Excluídos</h2>
-            <p>Quando você solicitar a exclusão da sua conta, os seguintes dados serão permanentemente removidos:</p>
-            
-            <div class="data-types">
-                <div class="data-card">
+        <!-- Tipos de Dados -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🗂️</div>
+                <h2 class="card-title">Dados que Serão Excluídos</h2>
+            </div>
+            <div class="data-grid">
+                <div class="data-item">
                     <h4>👤 Dados Pessoais</h4>
-                    <p>Nome completo, email, senha criptografada</p>
+                    <p>Nome completo, email, data de nascimento e informações de perfil</p>
                 </div>
-                
-                <div class="data-card">
-                    <h4>📈 Progresso de Aprendizado</h4>
-                    <p>Pontos, níveis, módulos completados, estatísticas</p>
+                <div class="data-item">
+                    <h4>🎵 Dados Musicais</h4>
+                    <p>Progresso nos módulos, pontuações, conquistas e histórico de aprendizado</p>
                 </div>
-                
-                <div class="data-card">
-                    <h4>🎯 Histórico de Quizzes</h4>
-                    <p>Resultados de quizzes, tentativas, pontuações</p>
+                <div class="data-item">
+                    <h4>📊 Estatísticas</h4>
+                    <p>Nível atual, pontos acumulados, sequência de dias e métricas de uso</p>
                 </div>
-                
-                <div class="data-card">
+                <div class="data-item">
                     <h4>🏆 Conquistas</h4>
-                    <p>Medalhas, badges, streaks, desafios diários</p>
+                    <p>Todas as medalhas, badges e reconhecimentos obtidos</p>
                 </div>
-                
-                <div class="data-card">
+                <div class="data-item">
+                    <h4>📝 Conteúdo Gerado</h4>
+                    <p>Notas pessoais, comentários e qualquer conteúdo criado pelo usuário</p>
+                </div>
+                <div class="data-item">
                     <h4>⚙️ Configurações</h4>
-                    <p>Preferências do usuário, configurações personalizadas</p>
-                </div>
-                
-                <div class="data-card">
-                    <h4>📱 Dados do Dispositivo</h4>
-                    <p>Tokens de notificação, IDs de dispositivo</p>
+                    <p>Preferências do aplicativo, configurações de notificação e personalizações</p>
                 </div>
             </div>
         </div>
 
-        <div class="section">
-            <h2>⏰ Período de Retenção</h2>
-            <h3>Prazo de Exclusão</h3>
-            <p>Sua conta será <strong>permanentemente excluída após 7 dias</strong> da solicitação. Durante este período, você pode cancelar a exclusão a qualquer momento através do aplicativo.</p>
-            
-            <h3>Dados Não Retidos</h3>
-            <p>Após a exclusão permanente, <strong>nenhum dado pessoal será mantido</strong> em nossos servidores. Não há período adicional de retenção.</p>
+        <!-- Período de Retenção -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">⏰</div>
+                <h2 class="card-title">Período de Retenção</h2>
+            </div>
+            <div class="alert alert-success">
+                <strong>✅ Período de Graça:</strong> 7 dias após a solicitação de exclusão<br>
+                <strong>🔄 Cancelamento:</strong> Você pode cancelar a exclusão durante este período<br>
+                <strong>🗑️ Exclusão Final:</strong> Após 7 dias, todos os dados são permanentemente removidos
+            </div>
+            <p>Durante o período de graça de 7 dias, seus dados permanecem no sistema mas sua conta fica inativa. Você pode cancelar a exclusão a qualquer momento durante este período através do aplicativo.</p>
         </div>
 
-        <div class="warning">
-            <h3>⚠️ Importante</h3>
-            <p><strong>A exclusão é irreversível.</strong> Após o período de 7 dias, não será possível recuperar sua conta ou dados. Certifique-se de que realmente deseja excluir sua conta antes de confirmar a solicitação.</p>
-        </div>
-
-        <div class="section">
-            <h2>🔒 Segurança dos Dados</h2>
-            <p>Durante o período de 7 dias antes da exclusão permanente:</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>Sua conta será marcada como "inativa" e não poderá ser acessada</li>
-                <li>Seus dados permanecerão criptografados e seguros</li>
-                <li>Nenhuma nova atividade será registrada</li>
-                <li>Você receberá lembretes por email sobre a exclusão pendente</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>📞 Suporte</h2>
-            <p>Se você tiver dúvidas sobre esta política ou precisar de ajuda com a exclusão da conta, entre em contato conosco:</p>
+        <!-- Contato -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📞</div>
+                <h2 class="card-title">Precisa de Ajuda?</h2>
+            </div>
+            <p>Se você tiver dúvidas sobre o processo de exclusão ou precisar de assistência, nossa equipe de suporte está disponível para ajudar.</p>
             <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:suporte.notemusic@gmail.com" class="email-link">suporte.notemusic@gmail.com</a></p>
+                <h4>📧 Suporte Técnico</h4>
+                <p><strong>Email:</strong> suporte.notemusic@gmail.com</p>
                 <p><strong>Resposta:</strong> Até 48 horas úteis</p>
-                <p><strong>Idioma:</strong> Português (Brasil)</p>
+                <p><strong>Idiomas:</strong> Português (Brasil)</p>
+            </div>
+            <div style="margin-top: var(--spacing-lg);">
+                <a href="mailto:suporte.notemusic@gmail.com?subject=Solicitação de Exclusão de Conta - NoteMusic" class="btn btn-primary">
+                    📧 Enviar Email de Suporte
+                </a>
             </div>
         </div>
 
-        <div class="footer">
-            <p><strong>NoteMusic</strong> - Desenvolvido por <strong>Daniel Silva</strong> com ❤️ para o aprendizado musical</p>
-            <p>Última atualização: <span id="current-date"></span></p>
-            <p>Esta página está em conformidade com os requisitos do Google Play Store</p>
-            <a href="javascript:history.back()" class="back-button">← Voltar</a>
+        <!-- Política de Privacidade -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🔒</div>
+                <h2 class="card-title">Política de Privacidade</h2>
+            </div>
+            <p>Esta política de exclusão está em conformidade com:</p>
+            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+                <li><strong>LGPD</strong> - Lei Geral de Proteção de Dados (Brasil)</li>
+                <li><strong>GDPR</strong> - Regulamento Geral sobre a Proteção de Dados (Europa)</li>
+                <li><strong>Google Play Store</strong> - Políticas de Desenvolvedor</li>
+            </ul>
+            <div class="alert alert-info">
+                <strong>ℹ️ Transparência:</strong> Comprometemo-nos a ser transparentes sobre como coletamos, usamos e excluímos seus dados pessoais.
+            </div>
         </div>
     </div>
 
-    <script>
-        // Atualizar data atual
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
-        
-        // Adicionar efeito suave ao scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Analytics básico (opcional)
-        console.log('NoteMusic Account Deletion Policy Page loaded');
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🎵 NoteMusic</div>
+            <p>Desenvolvido com ❤️ por Daniel Silva</p>
+            <p>Transformando o aprendizado musical através da tecnologia</p>
+            <div class="contact-info">
+                <p><strong>📧 Contato:</strong> suporte.notemusic@gmail.com</p>
+                <p><strong>🌐 Plataforma:</strong> Google Play Store</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
